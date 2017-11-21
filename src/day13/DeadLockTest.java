@@ -27,17 +27,17 @@ class Test implements Runnable
 
 		if (flag) {
 			synchronized (MyLock.locka) {
-				System.out.println("if   lock.....");
+				System.out.println(Thread.currentThread().getName()+"......if   lock.....");
 				synchronized (MyLock.lockb) {
-					System.out.println("if   lock.....");
+					System.out.println(Thread.currentThread().getName()+"....if   lock.....");
 				}
 			}
 		}
 		else {
 			synchronized (MyLock.lockb) {
-				System.out.println("else  lock......");
+				System.out.println(Thread.currentThread().getName()+"...else  lock......");
 				synchronized (MyLock.locka) {
-					System.out.println("else   lock.....");
+					System.out.println(Thread.currentThread().getName()+".....else   lock.....");
 				}
 			}
 		}
