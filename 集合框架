@@ -73,3 +73,20 @@ List:
 	连续的空间，所以比较快
 	|--LinkedList:内部链接列表数据结构，是不同步的。增删元素的速度非常快。
 	因为不连续所以比较慢
+	
+LinkedList:
+	
+	addFirst();
+	addLast();
+	
+	getFirst();//获取但不移除,如果链表为空,抛出NoSuchElementException
+	getLast();
+	jdk1.6
+	peekFirst();//获取大不移除,如果链表为空,返回Null.
+	peekLast
+	
+	removeFirst();//获取但不移除,如果链表为空,抛出NoSuchElementException
+	removeLast();
+	jdk1.6
+	pollFirst();//获取大不移除,如果链表为空,返回Null.
+	pollLast();
