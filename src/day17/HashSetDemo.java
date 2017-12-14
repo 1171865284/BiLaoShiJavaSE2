@@ -21,6 +21,7 @@ public class HashSetDemo {
 		hs.add("2");
 		hs.add("3");
 		hs.add("4");
+		//存再多也没有用不会重复，因为有唯一性
 		hs.add("1");
 		hs.add("1");
 		hs.add("1");
