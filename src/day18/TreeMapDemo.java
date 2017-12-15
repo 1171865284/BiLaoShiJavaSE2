@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
-import day18.been.Student;
+import day18.bean.Student;
 
 public class TreeMapDemo {
 
