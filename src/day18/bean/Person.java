@@ -1,4 +1,4 @@
-package day18.been;
+package day18.bean;
 
 public class Person implements Comparable<Person> {
 
