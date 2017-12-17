@@ -1,0 +1,30 @@
+Collection
+	|---list:有序(存入和取出的顺序一致),元素都有索引(角标),元素可以重复。
+	|---set:元素不能重复,无序。
+	
+List:特有常见方法：有一个共性特点就是都可以操作角标。
+
+1.添加
+	void add(index, element);
+	void add(index, collection);
+
+2.删除
+	Object remove(index);
+	
+3.修改
+	Object set(index, element);
+	
+4.获取
+	Object get(index);
+	int indexOf(object);
+	int lastIndexOf(object);
+	List subList(from, to);
+	
+list集合是可以完成对集合的增删改查.
+
+List:
+	|--Vector:内部是数组数据结构，是同步的。增删，查询都很慢！
+	|--ArrayList:内部是数组数据结构，是不同步的。替代了Vector，查询的速度快。
+	连续的空间，所以比较快
+	|--LinkedList:内部链接列表数据结构，是不同步的。增删元素的速度非常快。
+	因为不连续所以比较慢
