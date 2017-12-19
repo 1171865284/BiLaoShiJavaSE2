@@ -228,3 +228,50 @@ Set
 看到tree:就呀哟想到二叉树，就要想到排序，就要想到两个接口Comparable，Comparactor.
 
 而且通常这些常用的结合容器都不是同步的。
+=====================================================================
+=====================================================================
+=====================================================================
+
+
+List list = new ArrayList();//非同步的。
+
+list = MyCollections.synLIst(list);//返回一个同步的list。
+
+给非同步的集合加锁。
+//将非同步的集合变成同步的集合
+class MyCollections{
+	
+	public List synList(List list){
+	
+		return new MyList(list);
+	}
+}
+
+class MyList{
+
+	private List list;
+	
+	private static final Object lock = new Object();
+
+
+	MyList(List list){
+	
+		this.list = list;
+	}
+	
+	public boolean add(Object obj){
+	
+		synchronized(lock)
+		{
+			return list.add(obj);
+		}
+	}
+	
+	public boolean remove(Object obj){
+	
+		synchronized(lock)
+		{
+			return list.remove(obj);
+		}
+	}
+}
