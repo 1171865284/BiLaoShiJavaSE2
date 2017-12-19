@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1510236318277_0" label="Window Working Set" name="Aggregate for window 1510236318277"/>
+<<<<<<< HEAD
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1513672892214_1" label="Window Working Set" name="Aggregate for window 1513672892214"/>
+=======
+>>>>>>> branch 'master' of https://github.com/Cyan-King/BiLaoShiJavaSE2.git
 </workingSetManager>

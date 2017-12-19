@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>
 		<item value="-1" key="dialogWidth"/>
@@ -12,6 +13,8 @@
 		<list key="textArray">
 		</list>
 	</section>
+=======
+>>>>>>> branch 'master' of https://github.com/Cyan-King/BiLaoShiJavaSE2.git
 	<section name="ImportExportAction">
 	</section>
 </section>

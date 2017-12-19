@@ -8,6 +8,7 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.android.i
 
 !ENTRY com.android.ide.eclipse.ddms 4 0 2017-11-09 22:05:19.240
 !MESSAGE DDMS files not found: E:\java\adt-bundle-windows-x86_64_20140101\adt-bundle-windows-x86_64_20140101\eclipse\platform-tools\adb.exe E:\java\adt-bundle-windows-x86_64_20140101\adt-bundle-windows-x86_64_20140101\eclipse\tools\hprof-conv.exe E:\java\adt-bundle-windows-x86_64_20140101\adt-bundle-windows-x86_64_20140101\eclipse\tools\traceview.bat 
+<<<<<<< HEAD
 !SESSION 2017-12-19 16:40:58.590 -----------------------------------------------
 eclipse.buildId=4.6.0.I20160606-1100
 java.version=1.8.0_121
@@ -28,3 +29,5 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+=======
+>>>>>>> branch 'master' of https://github.com/Cyan-King/BiLaoShiJavaSE2.git
