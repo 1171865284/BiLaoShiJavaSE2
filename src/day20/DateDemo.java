@@ -21,7 +21,7 @@ import java.util.Date;
  * 因为可以通过具体的数值进行运算。
  */
 
-public class DateDemp {
+public class DateDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
