@@ -43,3 +43,79 @@ BufferedReader
 	:	newLine()
 BufferedWriter
 	:	readLine()
+	
+	
+装饰设计模式：
+	对一组对象的功能进行增强时，就可以使用该模式进行问题的解决。
+
+装饰和继承都能实现一样的特点：进行功能的扩展增强。
+
+有什么区别呢？
+
+首先有一个继承体系
+Writer
+	|--TextWriter:用于操作文本
+	|--MediaWriter:用于操作媒体
+	
+想要对操作的动作进行效率的提高
+按照面向对象，可以通过继承对具体的进行功能扩展。
+效率提高需要加入缓冲技术。
+
+Writer
+	|--TextWriter:用于操作文本
+		|--BufferTextWriter:加入了缓冲技术的操作文本的对象。
+	|--MediaQeiter:用于操作媒体
+		|--BufferMediaWriter:
+		
+		
+到这里就O了。但是这样做好像不是很理想。
+如果这个体系进行功能的扩展，有多个流对象。
+那么这个流要提高效率，是不是也要产生子类呢？是，这时就会发生只为提高功能，进行的继承。
+导致继承体系越来越臃肿。不够灵活。
+
+重新思考这个问题？
+既然加入的都是同一种技术--缓冲。
+前一种时让缓冲和具体的对象相结合。
+可不可以将缓冲进行单独封装，那个对象需要缓冲就将那个对象和缓冲相关联。
+
+class Buffer{
+	
+	Buffer(TextWriter w)
+	{}
+	
+	Buffer(MediaWriter w)
+	{}
+}
+
+class Buffer extends Writer{
+
+	BufferWriter(Writer w)
+	{
+		
+	}	
+
+}
+
+Writer
+	|--TextWriter:用于操作文本
+	|--MediaWriter:用于操作媒体
+	|--BufferWriter:用于提高效率
+	
+装饰比继承灵活。
+
+特点：装饰类和被装饰类都必须所属同以接口或者父类。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
