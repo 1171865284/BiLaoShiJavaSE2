@@ -17,6 +17,7 @@ public class FileReaderDemo2 {
 		
 		int len = 0;
 		
+		//进行读取操作
 		while((len = fr.read(buf)) != -1){
 			System.out.println(new String(buf));
 		}
