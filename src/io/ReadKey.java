@@ -1,7 +1,9 @@
 package io;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class ReadKey {
 
@@ -45,6 +47,7 @@ public class ReadKey {
 			else
 				//将读取到的数据存储到缓冲区中
 				sb.append((char)ch);
+			
 		}
 		
 	}
@@ -52,15 +55,28 @@ public class ReadKey {
 	private static void readKey_1() throws IOException {
 		// TODO Auto-generated method stub
 		
-		InputStream in = System.in;
+//		InputStream in = System.in;
+		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
 		
-		int ch = 0;
+//		int ch = 0;
+//		
+////		System.out.println((char)ch);
+//		
+//		while((ch = in.read()) != -1){
+//			System.out.println((char)ch);
+//		} 
 		
-//		System.out.println((char)ch);
+		String line = null;
 		
-		while((ch = in.read()) != -1){
-			System.out.println((char)ch);
-		} 
+		while((line = bufr.readLine()) != null){
+			if ("over".equals(line)) {
+				break;
+			}else {
+				System.out.println(line.toUpperCase());
+			}
+		}
+		
+		bufr.close();
 	}
 
 }
