@@ -10,7 +10,7 @@ public class ReadKey {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		readKey_2();
+		readKey_1();
 	}
 
 	private static void readKey_2() throws IOException {
