@@ -1,5 +1,8 @@
 package io;
 
+/*
+ * 功能：文件的过滤
+ */
 import java.io.File;
 import java.util.Iterator;
 
@@ -12,7 +15,7 @@ public class FileListDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		listDemo_2();
+		listDemo_3();
 	}
 
 	private static void listDemo_4() {
