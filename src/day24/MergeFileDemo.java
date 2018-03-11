@@ -23,6 +23,8 @@ import io.bean.SuffixFilter;
 
 public class MergeFileDemo {
 
+	private static File file;
+
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
@@ -31,26 +33,42 @@ public class MergeFileDemo {
 		MergeFile_2(dir);
 	}
 
+	/*
+	 * 在我们在切割文件的时候我们就已经知道了我们切割了多少个文件，以及我们切割的文件源是什么名称。
+	 * 但是我们是放在了一个（.properties）的配置文件里面了
+	 * 所以接下来的第一步动作就是，我们需要读取这个配置文件中的数据来知道我们切割的配置文件有多少个碎片，源文件名称是什么
+	 * 1.我们要将配置文件过滤出来
+	 * 2.判断是否有或者配置文件是否有或则唯一
+	 * 3.定义一个对象记录配置文件
+	 * 定义一个对象记录配置的文件就是从FileList中找到那个配置文件记录起来
+	 * File confile = files[0];
+	 * 4.使用properties集合对象加载配置文件
+	 * 5.将配置文件信息进行读取
+	 * 6.将配置文件加载到集合当中
+	 * 7.将配置文件中的我们需要的数据封装起来
+	 * 接下来就和争创合并一个样
+	 * 值得说的是合并就是使用SequenceInputStream对象来进行排序独处然后再写入
+	 * 就和copy一样
+	 */
 	private static void MergeFile_2(File dir) throws IOException {
 		// TODO Auto-generated method stub
 
-		// 使用过滤器来过滤出配置文件
+		//将文件中的配置文件,既然用到了过滤器我们就想到了Filelist
 		File[] files = dir.listFiles(new SuffixFilter(".properties"));
-
+		
+		//判断是否有或者配置文件是否有或则唯一
 		if (files.length != 1) {
-			throw new RuntimeException(dir + "，该文件夹下没有配置文件或者不唯一！");
+			throw new RuntimeException(dir+",该文件目录下配置文件不唯一");
 		}
-
-		// 记录配置文件的对象
+		
+		//定义一个对象记录配置文件
 		File confile = files[0];
-
-		// 在这里我们使用properties对象加载文件
+		
 		Properties prop = new Properties();
-		// 先在我们来读取配置文件
 		FileInputStream fis = new FileInputStream(confile);
-
-		// 将配置文件加载到集合当中
+		
 		prop.load(fis);
+		
 		String filename = prop.getProperty("filename");
 		int count = Integer.parseInt(prop.getProperty("partcount"));
 
