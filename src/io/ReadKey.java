@@ -1,9 +1,11 @@
 package io;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class ReadKey {
 
@@ -57,6 +59,8 @@ public class ReadKey {
 		
 //		InputStream in = System.in;
 		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+		
+//		BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 //		int ch = 0;
 //		
