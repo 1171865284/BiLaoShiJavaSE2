@@ -25,16 +25,20 @@ public class UDPSendDemo {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		
+		System.out.println("UDP发送端启动.......");
 
 		//创建UDP的socket服务，使用DatagramSocket类
-		DatagramSocket ds = new DatagramSocket();
+		//发送的端口号要明确
+		DatagramSocket ds = new DatagramSocket(8888);
 		
 		//将要发送的数据封装起来
 		String str = "这就是我们要发送的数据啦！";
 		
 		//我们使用Datagrampacket封装到数据保包
-		byte [] buf = new byte[1024];
-		DatagramPacket dp = new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.7.4"), 1000);
+		byte [] buf = str.getBytes();
+		//要确定发送的IP地址正确，和明确端口号
+		DatagramPacket dp = new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.7.8"), 10000);
 		
 		//3.通过UDP的socket服务将数据包发送出去
 		ds.send(dp);

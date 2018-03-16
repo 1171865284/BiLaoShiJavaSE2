@@ -18,7 +18,7 @@ public class IPDemo {
 		InetAddress ip = InetAddress.getLocalHost();
 		
 //		//获取其他主机的IP地址对象
-		ip = InetAddress.getByName("www.Google.com");
+//		ip = InetAddress.getByName("www.Google.com");
 //		ip = InetAddress.getByName("10.1.1.1");
 		
 		System.out.println(ip.getHostName());
