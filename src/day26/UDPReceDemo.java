@@ -15,9 +15,9 @@ import java.net.SocketException;
  * 思路：
  * 	1.创建UDP的socket服务
  * 	2.创建数据包用来存储数据
- * 	2.使用socket服务的receive方法将接受到的数据存储到数据包中
- * 	3.将数据包解析
- * 	4.socket服务关闭
+ * 	3.使用socket服务的receive方法将接受到的数据存储到数据包中
+ * 	4.将数据包解析
+ * 	5.socket服务关闭
  */
 
 public class UDPReceDemo {
