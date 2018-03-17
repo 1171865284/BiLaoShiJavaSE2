@@ -37,6 +37,7 @@ public class Send implements Runnable {
 				byte[] buf = line.getBytes();
 				// 要确定发送的IP地址正确，和明确端口号
 				DatagramPacket dp = new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.7.8"), 10000);
+				System.out.println("");
 
 				// 3.通过UDP的socket服务将数据包发送出去
 				ds.send(dp);
