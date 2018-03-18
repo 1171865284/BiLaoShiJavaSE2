@@ -1,5 +1,11 @@
 package day26.net.TCP;
 
+/*
+ * 程序功能：网络编程---TCP文本文件的上传
+ * 程序员：魏国平
+ * 编写时间：3月18
+ */
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -15,7 +21,7 @@ public class UploadClient {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 
 		// 1.socket服务的开启
-		Socket s = new Socket("192.168.7.8", 10010);
+		Socket s = new Socket("192.168.1.103", 10010);
 
 		// 2.源目的
 		BufferedReader bufr = new BufferedReader(new FileReader("G:\\client.txt"));

@@ -1,5 +1,11 @@
 package day26.net.TCP;
 
+/*
+ * 程序功能：网络编程---TCP文本文件的上传
+ * 程序员：魏国平
+ * 编写时间：3月18
+ */
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
