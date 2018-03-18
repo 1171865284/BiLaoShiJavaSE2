@@ -21,7 +21,7 @@ public class ClientDemo3 {
 		// TODO Auto-generated method stub
 
 		//创建TCP客户端Socket服务
-		Socket socket = new Socket("192.168.7.8", 8288);
+		Socket socket = new Socket("192.168.1.103", 8288);
 		
 		//建立成功后创建输出流对象
 		OutputStream out = socket.getOutputStream();
