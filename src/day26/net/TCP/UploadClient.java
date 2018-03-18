@@ -24,7 +24,7 @@ public class UploadClient {
 		Socket s = new Socket("192.168.1.103", 10010);
 
 		// 2.源目的
-		BufferedReader bufr = new BufferedReader(new FileReader("G:\\client.txt"));
+		BufferedReader bufr = new BufferedReader(new FileReader("G:\\TCP\\client.txt"));
 
 		// 3.输出流
 		PrintWriter out = new PrintWriter(s.getOutputStream(), true);

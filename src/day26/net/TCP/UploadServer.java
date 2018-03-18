@@ -31,7 +31,7 @@ public class UploadServer {
 		BufferedReader buIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
 		
 		//4.写入客户端的数据
-		BufferedWriter bufw = new BufferedWriter(new FileWriter("G:\\server.txt"));
+		BufferedWriter bufw = new BufferedWriter(new FileWriter("G:\\TCP\\server.txt"));
 		
 		//5.这个里我们就是写入数据
 		String line = null;
