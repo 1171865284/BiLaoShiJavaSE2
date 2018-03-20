@@ -22,7 +22,7 @@ public class UploadPicClient {
 		// TODO Auto-generated method stub
 
 		//创建客户端socket
-		Socket s = new Socket("192.168.1.103",10008);
+		Socket s = new Socket("192.168.10.31",10008);
 		
 		//读取客户端要上传的文件
 		FileInputStream fis = new FileInputStream("G:\\TCP-pic\\client.jpg");
