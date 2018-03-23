@@ -18,7 +18,7 @@ public class ClientDemo2 {
 		// TODO Auto-generated method stub
 
 		//创建TCP客户端Socket服务
-		Socket socket = new Socket("192.168.7.8", 10009);
+		Socket socket = new Socket("192.168.10.31", 10009);
 		
 		//建立成功后创建输出流对象
 		OutputStream out = socket.getOutputStream();
@@ -36,8 +36,6 @@ public class ClientDemo2 {
 		
 		//关闭资源
 		socket.close();
-		
-		
 	}
 
 }

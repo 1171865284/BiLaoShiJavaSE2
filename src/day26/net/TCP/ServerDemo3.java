@@ -26,28 +26,30 @@ public class ServerDemo3 {
 		// 服务端必须提供一个对外窗口否则客户端无法连接s
 		Socket s = ss.accept();//阻塞式
 
-		// 获取连接过来的客户端对象
-		InputStream in = s.getInputStream();
-		byte[] buf = new byte[1024];
-		int len = in.read(buf);
+		while(true){
+			// 获取连接过来的客户端对象
+			InputStream in = s.getInputStream();
+			byte[] buf = new byte[1024];
+			int len = in.read(buf);
 
-		String text = new String(buf, 0, len);
-		System.out.println(text);
+			String text = new String(buf, 0, len);
+			System.out.println(text);
 
-		// 使用客户端socket对象的输出流给客户端返回数据
-		OutputStream out = s.getOutputStream();
-		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
-		String line = null;
-		while((line = bufr.readLine()) != null){
-			if ("over".equals(line)) {
-				break;
-			}
-			out.write(line.getBytes());
+			// 使用客户端socket对象的输出流给客户端返回数据
+//			OutputStream out = s.getOutputStream();
+			/*BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+			String line = null;
+			while((line = bufr.readLine()) != null){
+				if ("over".equals(line)) {
+					break;
+				}
+				out.write(line.getBytes());
+			}*/
+//			out.write("客户端开启".getBytes());
+
+			/*ss.close();
+			s.close();*/
 		}
-		
-
-		ss.close();
-		s.close();
 
 	}
 
