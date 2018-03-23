@@ -34,6 +34,7 @@ public class RegexTest_2 {
 		for (String mail : list) {
 			System.out.println("mail:" + mail);
 		}
+
 	}
 
 	@Test
